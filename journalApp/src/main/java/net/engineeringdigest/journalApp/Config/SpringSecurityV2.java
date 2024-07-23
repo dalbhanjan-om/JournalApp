@@ -27,7 +27,7 @@ public class SpringSecurityV2 {
         http
                 .authorizeRequests(authorize -> authorize
                         .antMatchers("/public/**").permitAll()
-                        .antMatchers("/journal/**", "/user/**").authenticated()
+                        .antMatchers("/journal/**", "/user/**","/Wheather-Api/**").authenticated()
                         .antMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
